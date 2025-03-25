@@ -1,9 +1,9 @@
 <template>
     <div>
-      <h1>Centros del Año - {{ $route.params.year }}</h1>
+      <h1>Centres del Any - {{ $route.params.any }}</h1>
       <ul>
         <li v-for="centre in centres" :key="center">
-          <router-link :to="`/beques/${$route.params.year}/${centre}`">{{ centre }}</router-link>
+          <router-link :to="`/beques/${$route.params.any}/${centre}`">{{ centre }}</router-link>
         </li>
       </ul>
     </div>
@@ -17,6 +17,6 @@
   const route = useRoute();
   
   const centres = computed(() =>
-    [...new Set(data.value.filter(item => item.any_convocatoria == route.params.year).map(item => item.nom_entitat))].sort());
+    [...new Set(data.value.filter(item => item.any_convocatoria == route.params.any).map(item => item.nom_entitat))].sort());
   </script>
   
