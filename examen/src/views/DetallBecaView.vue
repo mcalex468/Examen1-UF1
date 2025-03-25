@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Detalles de Becas - {{ $route.params.center }}</h1>
+    <h1>Detalles de Becas - {{ $route.params.centre }}</h1>
     <ul>
       <li v-for="item in centres" :key="item.codi_expedient">
         {{ item.titol_projecte }} - {{ item.import_total }}€
@@ -17,6 +17,6 @@ const { data } = useBeques();
 const route = useRoute();
 
 const centres = computed(() =>
-  data.value.filter(item => item.any_convocatoria == route.params.year && item.nom_entitat == route.params.center)
+  data.value.filter(item => item.any_convocatoria == route.params.any && item.nom_entitat == route.params.centre)
 );
 </script>
