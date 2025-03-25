@@ -10,7 +10,7 @@
   </template>
   
   <script setup>
-  import Navigation from './components/navigation.vue'
+  import Navigation from './components/navigation.vue';
   </script>
   
   

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_URL = 'https://analisi.transparenciacatalunya.cat/resource/rsgi-8ymj.json';
 
-export function useScholarships() {
+export function useBeques() {
   const data = ref([]);
 
   const fetchBeques = async () => {
@@ -17,5 +17,6 @@ export function useScholarships() {
 
   onMounted(fetchBeques);
 
-  return { data, loading, error };
+  return { data };
 }
+

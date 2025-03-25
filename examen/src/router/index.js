@@ -7,13 +7,13 @@ const router = createRouter({
     { path: '/',name: 'home', component: HomeView, },
     
     { path: '/beques', name: 'beques',  
-      component: () => import('../views/AboutView.vue'), },
+      component: () => import('../views/BequesView.vue'), props: true},
 
     { path: '/beques/:centres', name: 'beques',  
-      component: () => import('../views/AboutView.vue'), },
+      component: () => import('../views/CentresView.vue'), props: true},
 
-    { path: '/beques/:centres/:any', name: 'beques',  
-      component: () => import('../views/AboutView.vue'), },
+    { path: '/beques/:centres/:detall', name: 'beques',  
+      component: () => import('../views/DetallBecaView.vue'), props: true },
   ],
 })
 

@@ -1,10 +1,13 @@
 <template>
   <nav>
-    <!--<router-link to="/">Home</router-link>-->
-    <router-link to="/">Posts</router-link>
-    <router-link to="/beques">Aigua</router-link>
+    <h3>Examen M14 UF2</h3>
+    <router-link to="/">Home</router-link>
+    <router-link to="/beques">Beques</router-link>
   </nav>
 </template>
+<script setup>
+import { RouterLink } from 'vue-router';
+</script>
 <style scoped>
 nav {
   background-color: #3498db;
@@ -20,7 +23,6 @@ nav a {
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px;
-  transition: background 0.3s;
 }
 
 nav a:hover {

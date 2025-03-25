@@ -1,11 +1,24 @@
-<script setup>
-
-</script>
-
 <template>
-  <main>
-   <p>Desenvolupa aquest projecte Vue 3 amb composition api script setup. No pots fer servir qualsevol altra opció sintàctica.</p>
-    <p>Els estils que veus en aquest enunciat són orientatius, no cal que facis servir els mateixos estils, no tindrà cap efecte a la nota final.</p>
+    <div>
+      <h1>Anys Beques</h1>
+      <ul>
+        <li v-for="any in anys" :key="year">
+          <router-link :to="`/beques/${any}`">{{ any }}</router-link>
+        </li>
+      </ul>
+    </div>
+  </template>
+  
+  <script setup>
+  import { useBeques } from '../composables/useBeques.js';
+  
+  const { data } = useBeques();
+  
+  console.log("DADES")
+  console.log(dades);
 
-  </main>
-</template>
+  const anys = computed(() =>
+    [...new Set(data.value.map(item => item.any_convocatoria))].sort((a, b) => b - a)
+  );
+  </script>
+  
