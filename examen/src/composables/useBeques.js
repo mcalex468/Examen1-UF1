@@ -1,4 +1,4 @@
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from '@/vue';
 import axios from 'axios';
 
 const API_URL = 'https://analisi.transparenciacatalunya.cat/resource/rsgi-8ymj.json';
