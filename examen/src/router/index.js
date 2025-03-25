@@ -13,7 +13,7 @@ const router = createRouter({
       component: () => import('../views/CentresView.vue'), props: true},
 
     { path: '/beques/:centres/:detall', name: 'beques',  
-      component: () => import('../views/DetallBecaView.vue'), props: true },
+      component: () => import('../views/DetallBecaView.vue'), props: true }
   ],
 })
 

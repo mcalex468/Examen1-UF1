@@ -10,10 +10,10 @@
   </template>
   
   <script setup>
-  import { useScholarships } from '../composables/useBeques.js';
+  import { useBeques } from '../composables/useBeques.js';
   import { useRoute } from 'vue-router';
   
-  const { data } = useScholarships();
+  const { data } = useBeques();
   const route = useRoute();
   
   const centres = computed(() =>

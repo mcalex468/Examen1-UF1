@@ -8,6 +8,7 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 </script>
+
 <style scoped>
 nav {
   background-color: #3498db;
